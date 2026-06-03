@@ -177,6 +177,7 @@ body {
   text-shadow: var(--glow-pink);
   margin-bottom: 20px;
   letter-spacing: 2px;
+  line-height: 1.5;
 }
 
 /* Glitch animation for pixel text */
@@ -319,7 +320,8 @@ body {
     min-height: 420px;
   }
   .pixel-text {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 1.6;
   }
   .target-url {
     font-size: 14px;
