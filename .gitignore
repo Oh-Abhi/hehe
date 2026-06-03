@@ -15,7 +15,3 @@ out/
 .env
 *.log
 
-# Large local assets (served via Wikimedia CDN instead)
-assets/rick*.jpg
-assets/rick*.png
-*.ps1
