@@ -48,61 +48,6 @@
         </div>
       </div>
 
-      <!-- Captcha Grid Popup (Rick Astley selection) -->
-      <div id="captcha-modal" class="modal-overlay" style="display: none;">
-        <div class="modal-card">
-          <div class="modal-header">
-            <h3>Select all squares containing:<br><strong class="highlight">RICK ASTLEY</strong></h3>
-            <span class="small-hint">If there are none, select them anyway.</span>
-          </div>
-          
-          <div class="captcha-grid">
-            <!-- 9 cells, using pixel dancer image with different CSS filter states -->
-            <div class="grid-cell" onclick="toggleCell(this)">
-              <img src="../assets/pixel_dancer.png" style="filter: hue-rotate(90deg);" alt="Dancer">
-              <div class="checkmark-overlay">✓</div>
-            </div>
-            <div class="grid-cell" onclick="toggleCell(this)">
-              <img src="../assets/pixel_dancer.png" style="filter: grayscale(100%);" alt="Dancer">
-              <div class="checkmark-overlay">✓</div>
-            </div>
-            <div class="grid-cell" onclick="toggleCell(this)">
-              <img src="../assets/pixel_dancer.png" style="filter: invert(100%) hue-rotate(180deg);" alt="Dancer">
-              <div class="checkmark-overlay">✓</div>
-            </div>
-            <div class="grid-cell" onclick="toggleCell(this)">
-              <img src="../assets/pixel_dancer.png" style="filter: sepia(100%);" alt="Dancer">
-              <div class="checkmark-overlay">✓</div>
-            </div>
-            <div class="grid-cell" onclick="toggleCell(this)">
-              <img src="../assets/pixel_dancer.png" style="filter: brightness(150%) saturate(150%);" alt="Dancer">
-              <div class="checkmark-overlay">✓</div>
-            </div>
-            <div class="grid-cell" onclick="toggleCell(this)">
-              <img src="../assets/pixel_dancer.png" style="filter: blur(1.5px) hue-rotate(240deg);" alt="Dancer">
-              <div class="checkmark-overlay">✓</div>
-            </div>
-            <div class="grid-cell" onclick="toggleCell(this)">
-              <img src="../assets/pixel_dancer.png" style="filter: contrast(200%) hue-rotate(300deg);" alt="Dancer">
-              <div class="checkmark-overlay">✓</div>
-            </div>
-            <div class="grid-cell" onclick="toggleCell(this)">
-              <img src="../assets/pixel_dancer.png" style="filter: opacity(50%);" alt="Dancer">
-              <div class="checkmark-overlay">✓</div>
-            </div>
-            <div class="grid-cell" onclick="toggleCell(this)">
-              <img src="../assets/pixel_dancer.png" style="filter: saturate(300%);" alt="Dancer">
-              <div class="checkmark-overlay">✓</div>
-            </div>
-          </div>
-          
-          <div class="modal-footer">
-            <div class="footer-icons">♻️ 🔊 ℹ️</div>
-            <button id="btn-captcha-verify" class="verify-btn">VERIFY</button>
-          </div>
-        </div>
-      </div>
-
       <!-- Stage 1: You really wanna go inside? -->
       <div class="warning-content" id="stage-1" style="display: none;">
         <div class="alert-icon">❓</div>
@@ -134,6 +79,61 @@
       </div>
     </div>
   </main>
+
+  <!-- Captcha Grid Popup (Rick Astley selection) -->
+  <div id="captcha-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Select all squares containing:<br><strong class="highlight">RICK ASTLEY</strong></h3>
+        <span class="small-hint">If there are none, select them anyway.</span>
+      </div>
+      
+      <div class="captcha-grid">
+        <!-- 9 cells, using pixel dancer image with different CSS filter states -->
+        <div class="grid-cell" onclick="toggleCell(this)">
+          <img src="../assets/pixel_dancer.png" style="filter: hue-rotate(90deg);" alt="Dancer">
+          <div class="checkmark-overlay">✓</div>
+        </div>
+        <div class="grid-cell" onclick="toggleCell(this)">
+          <img src="../assets/pixel_dancer.png" style="filter: grayscale(100%);" alt="Dancer">
+          <div class="checkmark-overlay">✓</div>
+        </div>
+        <div class="grid-cell" onclick="toggleCell(this)">
+          <img src="../assets/pixel_dancer.png" style="filter: invert(100%) hue-rotate(180deg);" alt="Dancer">
+          <div class="checkmark-overlay">✓</div>
+        </div>
+        <div class="grid-cell" onclick="toggleCell(this)">
+          <img src="../assets/pixel_dancer.png" style="filter: sepia(100%);" alt="Dancer">
+          <div class="checkmark-overlay">✓</div>
+        </div>
+        <div class="grid-cell" onclick="toggleCell(this)">
+          <img src="../assets/pixel_dancer.png" style="filter: brightness(150%) saturate(150%);" alt="Dancer">
+          <div class="checkmark-overlay">✓</div>
+        </div>
+        <div class="grid-cell" onclick="toggleCell(this)">
+          <img src="../assets/pixel_dancer.png" style="filter: blur(1.5px) hue-rotate(240deg);" alt="Dancer">
+          <div class="checkmark-overlay">✓</div>
+        </div>
+        <div class="grid-cell" onclick="toggleCell(this)">
+          <img src="../assets/pixel_dancer.png" style="filter: contrast(200%) hue-rotate(300deg);" alt="Dancer">
+          <div class="checkmark-overlay">✓</div>
+        </div>
+        <div class="grid-cell" onclick="toggleCell(this)">
+          <img src="../assets/pixel_dancer.png" style="filter: opacity(50%);" alt="Dancer">
+          <div class="checkmark-overlay">✓</div>
+        </div>
+        <div class="grid-cell" onclick="toggleCell(this)">
+          <img src="../assets/pixel_dancer.png" style="filter: saturate(300%);" alt="Dancer">
+          <div class="checkmark-overlay">✓</div>
+        </div>
+      </div>
+      
+      <div class="modal-footer">
+        <div class="footer-icons">♻️ 🔊 ℹ️</div>
+        <button id="btn-captcha-verify" class="verify-btn">VERIFY</button>
+      </div>
+    </div>
+  </div>
 
   <footer class="footer">
     <p>Terminal active | guest@ohavi.me</p>
