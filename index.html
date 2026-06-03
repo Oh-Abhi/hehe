@@ -26,26 +26,30 @@
         <span class="header-title">SECURITY_WARNING.EXE</span>
       </div>
       
-      <div class="warning-content">
-        <div class="alert-icon">⚠️</div>
-        <h1 class="pixel-text glitched">RESTRICTED_ACCESS</h1>
-        <p class="desc-text">
-          You are attempting to access a highly classified subdomain:
-        </p>
-        <div class="target-url">
-          ohavi.me<span class="highlight">/nude</span>
+      <div class="warning-content" id="stage-1">
+        <div class="alert-icon">❓</div>
+        <h1 class="pixel-text glitched">YOU REALLY WANNA GO INSIDE??</h1>
+        
+        <div class="actions">
+          <button id="btn-stage-1-yes" class="btn btn-primary">
+            YES!
+          </button>
+          <button id="btn-scared-1" class="btn btn-secondary">
+            NO... 🥺
+          </button>
         </div>
-        <p class="details-text">
-          <strong>WARNING:</strong> This zone contains intense strobe lights, high-energy retro synth loops, and a pixelated avatar displaying extreme dance moves. Viewer discretion is advised.
-        </p>
+      </div>
+
+      <div class="warning-content" id="stage-2" style="display: none;">
+        <div class="alert-icon">⚡</div>
+        <h1 class="pixel-text glitched">THEN AGAIN, ARE YOU SURE??</h1>
         
         <div class="actions">
           <a href="/nude/" id="btn-enter" class="btn btn-primary">
-            <span class="btn-pixel-border"></span>
-            ENTER ZONE 🕺
+            ABSOLUTELY! 🕺
           </a>
-          <button id="btn-scared" class="btn btn-secondary">
-            I'm too scared 🥺
+          <button id="btn-scared-2" class="btn btn-secondary">
+            NOT SURE... 🥺
           </button>
         </div>
       </div>
@@ -53,36 +57,43 @@
   </main>
 
   <footer class="footer">
-    <p>Logged as guest@ohavi.me | Terminal active</p>
+    <p>Terminal active | guest@ohavi.me</p>
   </footer>
 
   <script>
-    // Make the "I'm too scared" button runaway or behave funnily
-    const scaredBtn = document.getElementById('btn-scared');
-    
-    // When hovering over the scared button, it hops to a random position!
-    scaredBtn.addEventListener('mouseover', () => {
-      const container = document.querySelector('.warning-content');
-      const containerRect = container.getBoundingClientRect();
-      const btnRect = scaredBtn.getBoundingClientRect();
+    function setupRunaway(btnId, containerId) {
+      const btn = document.getElementById(btnId);
       
-      // Calculate random coordinates inside the container
-      const maxX = containerRect.width - btnRect.width - 20;
-      const maxY = containerRect.height - btnRect.height - 20;
-      
-      const randomX = Math.max(10, Math.floor(Math.random() * maxX));
-      const randomY = Math.max(10, Math.floor(Math.random() * maxY));
-      
-      // Change position to absolute relative to warning content
-      scaredBtn.style.position = 'absolute';
-      scaredBtn.style.left = `${randomX}px`;
-      scaredBtn.style.top = `${randomY}px`;
-      scaredBtn.style.zIndex = '10';
-    });
+      btn.addEventListener('mouseover', () => {
+        const container = document.getElementById(containerId);
+        const containerRect = container.getBoundingClientRect();
+        const btnRect = btn.getBoundingClientRect();
+        
+        // Calculate random coordinates inside the container
+        const maxX = containerRect.width - btnRect.width - 20;
+        const maxY = containerRect.height - btnRect.height - 20;
+        
+        const randomX = Math.max(10, Math.floor(Math.random() * maxX));
+        const randomY = Math.max(10, Math.floor(Math.random() * maxY));
+        
+        btn.style.position = 'absolute';
+        btn.style.left = `${randomX}px`;
+        btn.style.top = `${randomY}px`;
+        btn.style.zIndex = '10';
+      });
 
-    // If they manage to click it, redirect to a funny google search
-    scaredBtn.addEventListener('click', () => {
-      window.location.href = 'https://www.google.com/search?q=how+to+cope+with+extreme+retro+disco+dancing';
+      btn.addEventListener('click', () => {
+        window.location.href = 'https://www.google.com/search?q=how+to+cope+with+extreme+retro+disco+dancing';
+      });
+    }
+
+    setupRunaway('btn-scared-1', 'stage-1');
+    setupRunaway('btn-scared-2', 'stage-2');
+
+    // Handle stage 1 to stage 2 transition
+    document.getElementById('btn-stage-1-yes').addEventListener('click', () => {
+      document.getElementById('stage-1').style.display = 'none';
+      document.getElementById('stage-2').style.display = 'flex';
     });
   </script>
 </body>
