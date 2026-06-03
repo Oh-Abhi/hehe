@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ohavi.me | Restricted Access</title>
+  <meta name="description" content="Warning: Restricted access area. Strobe warning. Fun pixel dance party awaits.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- CRT scanline overlay for retro effect -->
+  <div class="crt-overlay"></div>
+  
+  <div class="stars-bg"></div>
+  <div class="grid-bg"></div>
+
+  <main class="container">
+    <div class="warning-box">
+      <div class="warning-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="header-title">SECURITY_WARNING.EXE</span>
+      </div>
+      
+      <div class="warning-content">
+        <div class="alert-icon">⚠️</div>
+        <h1 class="pixel-text glitched">RESTRICTED_ACCESS</h1>
+        <p class="desc-text">
+          You are attempting to access a highly classified subdomain:
+        </p>
+        <div class="target-url">
+          ohavi.me<span class="highlight">/nude</span>
+        </div>
+        <p class="details-text">
+          <strong>WARNING:</strong> This zone contains intense strobe lights, high-energy retro synth loops, and a pixelated avatar displaying extreme dance moves. Viewer discretion is advised.
+        </p>
+        
+        <div class="actions">
+          <a href="/nude/" id="btn-enter" class="btn btn-primary">
+            <span class="btn-pixel-border"></span>
+            ENTER ZONE 🕺
+          </a>
+          <button id="btn-scared" class="btn btn-secondary">
+            I'm too scared 🥺
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Logged as guest@ohavi.me | Terminal active</p>
+  </footer>
+
+  <script>
+    // Make the "I'm too scared" button runaway or behave funnily
+    const scaredBtn = document.getElementById('btn-scared');
+    
+    // When hovering over the scared button, it hops to a random position!
+    scaredBtn.addEventListener('mouseover', () => {
+      const container = document.querySelector('.warning-content');
+      const containerRect = container.getBoundingClientRect();
+      const btnRect = scaredBtn.getBoundingClientRect();
+      
+      // Calculate random coordinates inside the container
+      const maxX = containerRect.width - btnRect.width - 20;
+      const maxY = containerRect.height - btnRect.height - 20;
+      
+      const randomX = Math.max(10, Math.floor(Math.random() * maxX));
+      const randomY = Math.max(10, Math.floor(Math.random() * maxY));
+      
+      // Change position to absolute relative to warning content
+      scaredBtn.style.position = 'absolute';
+      scaredBtn.style.left = `${randomX}px`;
+      scaredBtn.style.top = `${randomY}px`;
+      scaredBtn.style.zIndex = '10';
+    });
+
+    // If they manage to click it, redirect to a funny google search
+    scaredBtn.addEventListener('click', () => {
+      window.location.href = 'https://www.google.com/search?q=how+to+cope+with+extreme+retro+disco+dancing';
+    });
+  </script>
+</body>
+</html>
