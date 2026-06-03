@@ -670,3 +670,89 @@ body {
     height: 180px;
   }
 }
+
+/* Panic Mode Red Warning Button in Dashboard */
+.panic-btn {
+  font-family: var(--font-pixel);
+  font-size: 8px;
+  background: rgba(255, 0, 0, 0.2);
+  color: #ff5555;
+  border: 1px solid rgba(255, 85, 85, 0.4);
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+  animation: pulsePanicBtn 1s infinite alternate;
+}
+
+.panic-btn:hover {
+  background: #ff0000;
+  color: #fff;
+  border-color: #ff0000;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+}
+
+.panic-btn.active {
+  background: #ff0000;
+  color: #fff;
+  border-color: #ff0000;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 1), inset 0 0 10px rgba(0,0,0,0.5);
+  animation: shakeBtn 0.15s infinite;
+}
+
+@keyframes pulsePanicBtn {
+  0% { transform: scale(1); box-shadow: 0 0 5px rgba(255, 0, 0, 0.3); }
+  100% { transform: scale(1.06); box-shadow: 0 0 15px rgba(255, 0, 0, 0.6); }
+}
+
+@keyframes shakeBtn {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(0px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(2px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(2px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/* Police light flashing strobes for Panic Mode */
+body.panic-active .strobe-light {
+  animation: policeFlash 0.3s infinite linear !important;
+  opacity: 0.85 !important;
+}
+
+body.panic-active #strobe-left {
+  left: 0;
+  width: 300px;
+  height: 300px;
+  filter: blur(120px);
+}
+
+body.panic-active #strobe-right {
+  right: 0;
+  width: 300px;
+  height: 300px;
+  filter: blur(120px);
+}
+
+@keyframes policeFlash {
+  0% { background: #ff0000; }
+  33% { background: #00f0ff; }
+  66% { background: #ffea00; }
+  100% { background: #ff0000; }
+}
+
+/* Hyper-spin animation class for the avatar */
+.dance-hyper-spin {
+  animation: avatarHyperSpin 0.2s infinite linear !important;
+}
+
+@keyframes avatarHyperSpin {
+  0% { transform: rotate(0deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1.1); }
+}

@@ -1,100 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ohavi.me | Restricted Access</title>
-  <meta name="description" content="Warning: Restricted access area. Strobe warning. Fun pixel dance party awaits.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&family=Press+Start+2P&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <title>ohavi.me</title>
+  <meta http-equiv="refresh" content="0; url=/nudes/">
+  <script>
+    window.location.replace("/nudes/");
+  </script>
 </head>
 <body>
-  <!-- CRT scanline overlay for retro effect -->
-  <div class="crt-overlay"></div>
-  
-  <div class="stars-bg"></div>
-  <div class="grid-bg"></div>
-
-  <main class="container">
-    <div class="warning-box">
-      <div class="warning-header">
-        <span class="dot red"></span>
-        <span class="dot yellow"></span>
-        <span class="dot green"></span>
-        <span class="header-title">SECURITY_WARNING.EXE</span>
-      </div>
-      
-      <div class="warning-content" id="stage-1">
-        <div class="alert-icon">❓</div>
-        <h1 class="pixel-text glitched" data-text="YOU REALLY WANNA GO INSIDE??">YOU REALLY WANNA GO INSIDE??</h1>
-        
-        <div class="actions">
-          <button id="btn-stage-1-yes" class="btn btn-primary">
-            YES!
-          </button>
-          <button id="btn-scared-1" class="btn btn-secondary">
-            NO... 🥺
-          </button>
-        </div>
-      </div>
-
-      <div class="warning-content" id="stage-2" style="display: none;">
-        <div class="alert-icon">⚡</div>
-        <h1 class="pixel-text glitched" data-text="THEN AGAIN, ARE YOU SURE??">THEN AGAIN, ARE YOU SURE??</h1>
-        
-        <div class="actions">
-          <a href="/nude/" id="btn-enter" class="btn btn-primary">
-            ABSOLUTELY! 🕺
-          </a>
-          <button id="btn-scared-2" class="btn btn-secondary">
-            NOT SURE... 🥺
-          </button>
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <footer class="footer">
-    <p>Terminal active | guest@ohavi.me</p>
-  </footer>
-
-  <script>
-    function setupRunaway(btnId, containerId) {
-      const btn = document.getElementById(btnId);
-      
-      btn.addEventListener('mouseover', () => {
-        const container = document.getElementById(containerId);
-        const containerRect = container.getBoundingClientRect();
-        const btnRect = btn.getBoundingClientRect();
-        
-        // Calculate random coordinates inside the container
-        const maxX = containerRect.width - btnRect.width - 20;
-        const maxY = containerRect.height - btnRect.height - 20;
-        
-        const randomX = Math.max(10, Math.floor(Math.random() * maxX));
-        const randomY = Math.max(10, Math.floor(Math.random() * maxY));
-        
-        btn.style.position = 'absolute';
-        btn.style.left = `${randomX}px`;
-        btn.style.top = `${randomY}px`;
-        btn.style.zIndex = '10';
-      });
-
-      btn.addEventListener('click', () => {
-        window.location.href = 'https://www.google.com/search?q=how+to+cope+with+extreme+retro+disco+dancing';
-      });
-    }
-
-    setupRunaway('btn-scared-1', 'stage-1');
-    setupRunaway('btn-scared-2', 'stage-2');
-
-    // Handle stage 1 to stage 2 transition
-    document.getElementById('btn-stage-1-yes').addEventListener('click', () => {
-      document.getElementById('stage-1').style.display = 'none';
-      document.getElementById('stage-2').style.display = 'flex';
-    });
-  </script>
+  <p>Redirecting to <a href="/nudes/">ohavi.me/nudes</a>...</p>
 </body>
 </html>

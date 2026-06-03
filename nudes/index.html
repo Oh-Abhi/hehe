@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ohavi.me/nudes | Restricted Access Gate</title>
+  <meta name="description" content="Entry validation gate. Verify you are human and ready for extreme disco.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- CRT screen overlay -->
+  <div class="crt-overlay"></div>
+  <div class="stars-bg"></div>
+  <div class="grid-bg"></div>
+
+  <main class="container">
+    <div class="warning-box">
+      <div class="warning-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="header-title">VERIFY_DANCE_SKILLS.EXE</span>
+      </div>
+
+      <!-- Stage 0: Captcha Loop -->
+      <div class="warning-content" id="stage-captcha">
+        <div class="alert-icon">🤖</div>
+        <h2 class="pixel-text glitched" data-text="HUMAN_CHECK">HUMAN_CHECK</h2>
+        <p class="desc-text" style="margin-bottom: 20px;">Please verify you are a certified dancer before entering.</p>
+        
+        <!-- Google-style retro Captcha box -->
+        <div class="captcha-box" id="captcha-card">
+          <div class="captcha-left">
+            <div class="checkbox-container" id="checkbox-wrapper">
+              <input type="checkbox" id="real-checkbox" class="captcha-checkbox">
+              <label for="real-checkbox" class="checkbox-label" id="checkbox-trigger"></label>
+            </div>
+            <span class="captcha-text">I am not a robot (but I can dance)</span>
+          </div>
+          <div class="captcha-right">
+            <div class="recaptcha-logo">♻️</div>
+            <span class="logo-text">reDANCEcha</span>
+            <span class="logo-sub">Privacy • Terms</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Captcha Grid Popup (Rick Astley selection) -->
+      <div id="captcha-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-card">
+          <div class="modal-header">
+            <h3>Select all squares containing:<br><strong class="highlight">RICK ASTLEY</strong></h3>
+            <span class="small-hint">If there are none, select them anyway.</span>
+          </div>
+          
+          <div class="captcha-grid">
+            <!-- 9 cells, using pixel dancer image with different CSS filter states -->
+            <div class="grid-cell" onclick="toggleCell(this)">
+              <img src="../assets/pixel_dancer.png" style="filter: hue-rotate(90deg);" alt="Dancer">
+              <div class="checkmark-overlay">✓</div>
+            </div>
+            <div class="grid-cell" onclick="toggleCell(this)">
+              <img src="../assets/pixel_dancer.png" style="filter: grayscale(100%);" alt="Dancer">
+              <div class="checkmark-overlay">✓</div>
+            </div>
+            <div class="grid-cell" onclick="toggleCell(this)">
+              <img src="../assets/pixel_dancer.png" style="filter: invert(100%) hue-rotate(180deg);" alt="Dancer">
+              <div class="checkmark-overlay">✓</div>
+            </div>
+            <div class="grid-cell" onclick="toggleCell(this)">
+              <img src="../assets/pixel_dancer.png" style="filter: sepia(100%);" alt="Dancer">
+              <div class="checkmark-overlay">✓</div>
+            </div>
+            <div class="grid-cell" onclick="toggleCell(this)">
+              <img src="../assets/pixel_dancer.png" style="filter: brightness(150%) saturate(150%);" alt="Dancer">
+              <div class="checkmark-overlay">✓</div>
+            </div>
+            <div class="grid-cell" onclick="toggleCell(this)">
+              <img src="../assets/pixel_dancer.png" style="filter: blur(1.5px) hue-rotate(240deg);" alt="Dancer">
+              <div class="checkmark-overlay">✓</div>
+            </div>
+            <div class="grid-cell" onclick="toggleCell(this)">
+              <img src="../assets/pixel_dancer.png" style="filter: contrast(200%) hue-rotate(300deg);" alt="Dancer">
+              <div class="checkmark-overlay">✓</div>
+            </div>
+            <div class="grid-cell" onclick="toggleCell(this)">
+              <img src="../assets/pixel_dancer.png" style="filter: opacity(50%);" alt="Dancer">
+              <div class="checkmark-overlay">✓</div>
+            </div>
+            <div class="grid-cell" onclick="toggleCell(this)">
+              <img src="../assets/pixel_dancer.png" style="filter: saturate(300%);" alt="Dancer">
+              <div class="checkmark-overlay">✓</div>
+            </div>
+          </div>
+          
+          <div class="modal-footer">
+            <div class="footer-icons">♻️ 🔊 ℹ️</div>
+            <button id="btn-captcha-verify" class="verify-btn">VERIFY</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stage 1: You really wanna go inside? -->
+      <div class="warning-content" id="stage-1" style="display: none;">
+        <div class="alert-icon">❓</div>
+        <h1 class="pixel-text glitched" data-text="YOU REALLY WANNA GO INSIDE??">YOU REALLY WANNA GO INSIDE??</h1>
+        
+        <div class="actions">
+          <button id="btn-stage-1-yes" class="btn btn-primary">
+            YES!
+          </button>
+          <button id="btn-scared-1" class="btn btn-secondary">
+            NO... 🥺
+          </button>
+        </div>
+      </div>
+
+      <!-- Stage 2: Then again, are you sure? -->
+      <div class="warning-content" id="stage-2" style="display: none;">
+        <div class="alert-icon">⚡</div>
+        <h1 class="pixel-text glitched" data-text="THEN AGAIN, ARE YOU SURE??">THEN AGAIN, ARE YOU SURE??</h1>
+        
+        <div class="actions">
+          <a href="/nude/" id="btn-enter" class="btn btn-primary">
+            ABSOLUTELY! 🕺
+          </a>
+          <button id="btn-scared-2" class="btn btn-secondary">
+            NOT SURE... 🥺
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Terminal active | guest@ohavi.me</p>
+  </footer>
+
+  <script>
+    let hoverCount = 0;
+    const maxHovers = 5; // Hop 5 times then let them check it
+    
+    const checkboxWrapper = document.getElementById('checkbox-wrapper');
+    const checkboxTrigger = document.getElementById('checkbox-trigger');
+    const realCheckbox = document.getElementById('real-checkbox');
+    const captchaModal = document.getElementById('captcha-modal');
+
+    // Runaway Checkbox Logic
+    checkboxTrigger.addEventListener('mouseover', (e) => {
+      if (hoverCount < maxHovers) {
+        e.preventDefault();
+        hoverCount++;
+        
+        const card = document.getElementById('captcha-card');
+        const cardRect = card.getBoundingClientRect();
+        const wrapperRect = checkboxWrapper.getBoundingClientRect();
+        
+        // Boundaries to keep the checkbox inside the captcha box
+        const maxX = cardRect.width - wrapperRect.width - 20;
+        const maxY = cardRect.height - wrapperRect.height - 20;
+        
+        const randomX = Math.max(10, Math.floor(Math.random() * maxX));
+        const randomY = Math.max(10, Math.floor(Math.random() * maxY));
+        
+        checkboxWrapper.style.position = 'absolute';
+        checkboxWrapper.style.left = `${randomX}px`;
+        checkboxWrapper.style.top = `${randomY}px`;
+        checkboxWrapper.style.zIndex = '100';
+      }
+    });
+
+    // When checkbox is checked, trigger the Rickroll captcha grid
+    realCheckbox.addEventListener('change', () => {
+      if (realCheckbox.checked) {
+        setTimeout(() => {
+          captchaModal.style.display = 'flex';
+        }, 300);
+      }
+    });
+
+    // Grid Cell Toggle Selection
+    function toggleCell(cell) {
+      cell.classList.toggle('selected');
+    }
+
+    // Grid Verify Button Logic
+    document.getElementById('btn-captcha-verify').addEventListener('click', () => {
+      // Transition to Stage 1
+      captchaModal.style.display = 'none';
+      document.getElementById('stage-captcha').style.display = 'none';
+      document.getElementById('stage-1').style.display = 'flex';
+      
+      // Make sure checkbox trigger position is reset
+      checkboxWrapper.style.position = '';
+      checkboxWrapper.style.left = '';
+      checkboxWrapper.style.top = '';
+    });
+
+    // Runaway Button Logic for Stage 1 & Stage 2 negative actions
+    function setupRunaway(btnId, containerId) {
+      const btn = document.getElementById(btnId);
+      
+      btn.addEventListener('mouseover', () => {
+        const container = document.getElementById(containerId);
+        const containerRect = container.getBoundingClientRect();
+        const btnRect = btn.getBoundingClientRect();
+        
+        const maxX = containerRect.width - btnRect.width - 20;
+        const maxY = containerRect.height - btnRect.height - 20;
+        
+        const randomX = Math.max(10, Math.floor(Math.random() * maxX));
+        const randomY = Math.max(10, Math.floor(Math.random() * maxY));
+        
+        btn.style.position = 'absolute';
+        btn.style.left = `${randomX}px`;
+        btn.style.top = `${randomY}px`;
+        btn.style.zIndex = '10';
+      });
+
+      btn.addEventListener('click', () => {
+        window.location.href = 'https://www.google.com/search?q=how+to+cope+with+extreme+retro+disco+dancing';
+      });
+    }
+
+    setupRunaway('btn-scared-1', 'stage-1');
+    setupRunaway('btn-scared-2', 'stage-2');
+
+    // YES transitions
+    document.getElementById('btn-stage-1-yes').addEventListener('click', () => {
+      document.getElementById('stage-1').style.display = 'none';
+      document.getElementById('stage-2').style.display = 'flex';
+    });
+  </script>
+</body>
+</html>
