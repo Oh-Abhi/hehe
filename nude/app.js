@@ -409,7 +409,7 @@ btnPanic.addEventListener('click', () => {
     avatarContainer.style.animationPlayState = 'running';
     
     // Scrolling text track updates
-    trackName.textContent = "ALERT: RICKROLL CORE ACTIVE! • NEVER GONNA GIVE YOU UP • NEVER GONNA LET YOU DOWN • ";
+    trackName.textContent = "🚨 PANIC MODE ACTIVE 🚨 • NOW PLAYING: Never Gonna Give You Up by Rick Astley • You just got RICKROLLED 🎵 •";
   } else {
     btnPanic.classList.remove('active');
     document.body.classList.remove('panic-active');
@@ -428,7 +428,7 @@ btnPanic.addEventListener('click', () => {
     btnPlayPause.classList.add('active');
     avatarContainer.style.animationPlayState = 'running';
     
-    trackName.textContent = "NOW PLAYING: Unreal Superhero 3 (8-Bit Remix) • Dance Party Active at ohavi.me/nudes • ";
+    trackName.textContent = "NOW PLAYING: Groove Track 🎵 • Dance Party at ohavi.me/nude • Keep dancing! 🕺 •";
   }
 });
 

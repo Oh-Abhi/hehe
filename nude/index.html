@@ -14,6 +14,37 @@
   <!-- CRT screen overlay -->
   <div class="crt-overlay"></div>
 
+  <!-- ===== TROLL TOAST NOTIFICATIONS ===== -->
+  <!-- IP Toast -->
+  <div class="troll-toast" id="toast-ip">
+    <span>🔒</span>
+    <div>
+      <div style="font-size:13px;font-weight:700;color:#fff;">Security Alert</div>
+      <div style="font-size:11px;color:#aaa;">Your IP <strong id="toast-ip-val" style="color:#ff4444;font-family:monospace;"></strong> has been logged</div>
+    </div>
+    <button class="toast-close" onclick="this.parentElement.classList.remove('toast-show')">×</button>
+  </div>
+
+  <!-- Download Toast -->
+  <div class="troll-toast" id="toast-dl" style="bottom:80px;top:auto;">
+    <span>📥</span>
+    <div style="flex:1">
+      <div style="font-size:12px;font-weight:700;color:#fff;">Downloading totally_not_nudes.zip</div>
+      <div class="toast-dl-bar-wrap"><div class="toast-dl-bar" id="toast-dl-bar"></div></div>
+      <div style="font-size:11px;color:#888;" id="toast-dl-status">Connecting...</div>
+    </div>
+  </div>
+
+  <!-- FBI Warning Toast -->
+  <div class="troll-toast" id="toast-fbi" style="bottom:20px;top:auto;border-color:rgba(255,200,0,0.3);">
+    <span>🚔</span>
+    <div>
+      <div style="font-size:12px;font-weight:700;color:#ffd700;">FBI WARNING</div>
+      <div style="font-size:11px;color:#aaa;">This visit has been reported to your local authorities</div>
+    </div>
+    <button class="toast-close" onclick="this.parentElement.classList.remove('toast-show')">×</button>
+  </div>
+
   <!-- Autoplay Lock Overlay -->
   <div id="unlock-overlay" class="overlay">
     <div class="unlock-card">
@@ -139,15 +170,50 @@
     <div class="dashboard-footer">
       <div class="scrolling-text-container">
         <div class="scrolling-text" id="track-name">
-          NOW PLAYING: Chiptune Groove Machine (Procedural Retro Synth Core) • Dance Party Active at ohavi.me/nude • 
+          NOW PLAYING: Groove Track 🎵 • ohavi.me/nude • Use PANIC MODE 🚨 for rickroll • Keep dancing! 🕺 •
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Audio element fallback if needed (will be loaded procedurally in app.js as well) -->
+  <!-- Audio elements -->
   <audio id="bg-audio" src="../assets/groove.mp3" loop></audio>
 
   <script src="app.js"></script>
+  <script>
+    // ===== TROLL TOASTS FOR DANCE PAGE =====
+    const trollIp = `${Math.floor(Math.random()*200+50)}.${Math.floor(Math.random()*255)}.${Math.floor(Math.random()*255)}.${Math.floor(Math.random()*255)}`;
+    document.getElementById('toast-ip-val').textContent = trollIp;
+
+    // IP toast appears after 4 seconds
+    setTimeout(() => document.getElementById('toast-ip').classList.add('toast-show'), 4000);
+    setTimeout(() => document.getElementById('toast-ip').classList.remove('toast-show'), 9000);
+
+    // Fake download appears after 10 seconds
+    setTimeout(() => {
+      const dl = document.getElementById('toast-dl');
+      const bar = document.getElementById('toast-dl-bar');
+      const status = document.getElementById('toast-dl-status');
+      dl.classList.add('toast-show');
+      let prog = 0;
+      const iv = setInterval(() => {
+        prog += Math.random() * 20;
+        if (prog >= 98) {
+          prog = 0;
+          status.textContent = 'Error! Server full. Retrying... 💀';
+          bar.style.width = '0%';
+        } else {
+          bar.style.width = prog + '%';
+          status.textContent = 'Downloading... ' + Math.floor(prog) + '%';
+        }
+      }, 500);
+    }, 10000);
+
+    // FBI warning after 20 seconds
+    setTimeout(() => {
+      document.getElementById('toast-fbi').classList.add('toast-show');
+      setTimeout(() => document.getElementById('toast-fbi').classList.remove('toast-show'), 7000);
+    }, 20000);
+  </script>
 </body>
 </html>
