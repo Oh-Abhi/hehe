@@ -1,11 +1,11 @@
 /* ============================================================
-   LOVE ARCHIVE â€” Premium Apple-style CSS
-   Version 2.0 â€” Bright Luxury Glassmorphism
+   LOVE ARCHIVE — Premium Apple-style CSS
+   Version 2.0 — Bright Luxury Glassmorphism
    ============================================================ */
 
-/* â”€â”€ Google Fonts loaded via HTML â”€â”€ */
+/* ── Google Fonts loaded via HTML ── */
 
-/* â”€â”€ TOKENS â”€â”€ */
+/* ── TOKENS ── */
 :root {
   /* Palette */
   --white:        #ffffff;
@@ -49,7 +49,7 @@
   --radius-sm: 12px;
 }
 
-/* â”€â”€ RESET â”€â”€ */
+/* ── RESET ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html {
   scroll-behavior: smooth;
@@ -71,7 +71,7 @@ a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; }
 button { border: none; background: none; cursor: none; font: inherit; }
 
-/* â”€â”€ CUSTOM CURSOR â”€â”€ */
+/* ── CUSTOM CURSOR ── */
 #cursor-dot {
   position: fixed;
   width: 6px; height: 6px;
@@ -105,7 +105,7 @@ button { border: none; background: none; cursor: none; font: inherit; }
 .clicking #cursor-dot { transform: translate(-50%, -50%) scale(0.7); }
 .clicking #cursor-ring { transform: translate(-50%, -50%) scale(0.9); }
 
-/* â”€â”€ SCROLL PROGRESS â”€â”€ */
+/* ── SCROLL PROGRESS ── */
 #scroll-progress {
   position: fixed;
   top: 0; left: 0;
@@ -116,7 +116,7 @@ button { border: none; background: none; cursor: none; font: inherit; }
   transition: width 0.05s linear;
 }
 
-/* â”€â”€ NAV â”€â”€ */
+/* ── NAV ── */
 #nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -161,7 +161,7 @@ button { border: none; background: none; cursor: none; font: inherit; }
 }
 .nav-cta:hover { background: var(--cherry-soft); transform: scale(1.02); }
 
-/* â”€â”€ REVEAL ANIMATIONS â”€â”€ */
+/* ── REVEAL ANIMATIONS ── */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -181,7 +181,7 @@ button { border: none; background: none; cursor: none; font: inherit; }
 .reveal-d4 { transition-delay: 0.45s; }
 .reveal-d5 { transition-delay: 0.6s; }
 
-/* â”€â”€ LOADING â”€â”€ */
+/* ── LOADING ── */
 #loading {
   position: fixed; inset: 0;
   background: var(--white);
@@ -227,9 +227,9 @@ button { border: none; background: none; cursor: none; font: inherit; }
 @keyframes load-fade { to { opacity: 1; } }
 @keyframes load-progress { to { width: 100%; } }
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   SECTION 1 â€” HERO (Polaroid Collage)
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+/* ═══════════════════════════════════════
+   SECTION 1 — HERO (Polaroid Collage)
+═══════════════════════════════════════ */
 #hero {
   min-height: 100vh;
   position: relative;
@@ -726,7 +726,7 @@ button { border: none; background: none; cursor: none; font: inherit; }
   margin-top: 0.5rem;
 }
 
-/* â”€â”€ FOOTER â”€â”€ */
+/* ── FOOTER ── */
 #footer {
   background: var(--off-white);
   padding: 4rem 3rem;
@@ -757,7 +757,7 @@ button { border: none; background: none; cursor: none; font: inherit; }
   text-transform: uppercase;
 }
 
-/* â”€â”€ AMBIENT PARTICLES â”€â”€ */
+/* ── AMBIENT PARTICLES ── */
 #ambient-particles {
   position: fixed; inset: 0;
   pointer-events: none; z-index: 0;
@@ -776,14 +776,14 @@ button { border: none; background: none; cursor: none; font: inherit; }
   100% { transform: translateY(-100vh) scale(0.5); opacity: 0; }
 }
 
-/* â”€â”€ COLOR REACTIVE SECTION GLOW â”€â”€ */
+/* ── COLOR REACTIVE SECTION GLOW ── */
 .section-glow {
   position: absolute; inset: 0;
   pointer-events: none;
   transition: background 1.5s var(--ease-in-out);
 }
 
-/* â”€â”€ RESPONSIVE â”€â”€ */
+/* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
   .hero-inner { grid-template-columns: 1fr; gap: 2rem; }
   .hero-right { height: 55vh; }
@@ -815,7 +815,7 @@ button { border: none; background: none; cursor: none; font: inherit; }
   #footer { flex-direction: column; align-items: flex-start; }
 }
 
-/* â”€â”€ FLOWER SECTION & STICKY SLIDES â”€â”€ */
+/* ── FLOWER SECTION & STICKY SLIDES ── */
 :root {
   --sunflower-gold: #c9a84c;
   --lily-rose:      #d48a97;
@@ -835,7 +835,7 @@ button { border: none; background: none; cursor: none; font: inherit; }
   z-index: 10;
 }
 
-/* â”€â”€ SLIDES â”€â”€ */
+/* ── SLIDES ── */
 .slide {
   position: absolute;
   inset: 0;
@@ -889,7 +889,7 @@ button { border: none; background: none; cursor: none; font: inherit; }
   box-sizing: border-box;
 }
 
-/* â”€â”€ POLAROID FRAMES â”€â”€ */
+/* ── POLAROID FRAMES ── */
 .polaroid-wrapper {
   perspective: 1000px;
   will-change: transform;
@@ -960,7 +960,7 @@ button { border: none; background: none; cursor: none; font: inherit; }
   vertical-align: middle;
 }
 
-/* â”€â”€ TEXT OVERLAYS â”€â”€ */
+/* ── TEXT OVERLAYS ── */
 .text-wrapper {
   max-width: 440px;
   text-align: left;
@@ -1000,7 +1000,7 @@ button { border: none; background: none; cursor: none; font: inherit; }
   margin-left: 4px;
 }
 
-/* â”€â”€ RESPONSIVE STYLING FOR SLIDES â”€â”€ */
+/* ── RESPONSIVE STYLING FOR SLIDES ── */
 @media (max-width: 900px) {
   .slide-content {
     gap: 3rem;
@@ -1040,7 +1040,7 @@ button { border: none; background: none; cursor: none; font: inherit; }
 }
 
 /* ============================================================
-   EXPANSION SECTIONS â€” High Fidelity Styles
+   EXPANSION SECTIONS — High Fidelity Styles
    ============================================================ */
 
 /* Helper Variables & Section Globals */
@@ -1108,7 +1108,7 @@ button { border: none; background: none; cursor: none; font: inherit; }
   transition: all 0.4s var(--spring);
 }
 
-/* â”€â”€ FLOATING NAV DOCK â”€â”€ */
+/* ── FLOATING NAV DOCK ── */
 #floating-dock {
   position: fixed;
   bottom: 24px;
@@ -1184,7 +1184,7 @@ button { border: none; background: none; cursor: none; font: inherit; }
   transform: translateX(-50%) translateY(0);
 }
 
-/* â”€â”€ THINGS I LOVE (REASONS GRID) â”€â”€ */
+/* ── THINGS I LOVE (REASONS GRID) ── */
 .love-grid-section {
   background: var(--warm-white);
 }
@@ -1263,7 +1263,7 @@ button { border: none; background: none; cursor: none; font: inherit; }
   opacity: 0.22;
 }
 
-/* â”€â”€ BUCKET LIST â”€â”€ */
+/* ── BUCKET LIST ── */
 .bucket-section {
   background: #ffffff;
 }
@@ -1417,7 +1417,7 @@ button { border: none; background: none; cursor: none; font: inherit; }
   color: var(--text-second);
 }
 
-/* â”€â”€ SONG FOR YOU PLAYER â”€â”€ */
+/* ── SONG FOR YOU PLAYER ── */
 .song-section {
   background: var(--warm-white);
 }
@@ -1695,7 +1695,7 @@ button { border: none; background: none; cursor: none; font: inherit; }
   transform: translateX(5px);
 }
 
-/* â”€â”€ THINGS I HATE (PLAYFUL BENTO) â”€â”€ */
+/* ── THINGS I HATE (PLAYFUL BENTO) ── */
 .hate-section {
   background: #ffffff;
 }
@@ -1800,7 +1800,7 @@ button { border: none; background: none; cursor: none; font: inherit; }
   transform: translateY(0);
 }
 
-/* â”€â”€ LETTER ROOM (WAX SEAL) â”€â”€ */
+/* ── LETTER ROOM (WAX SEAL) ── */
 .letters-section {
   background: var(--warm-white);
 }
@@ -2004,7 +2004,7 @@ button { border: none; background: none; cursor: none; font: inherit; }
   line-height: 1.1;
 }
 
-/* â”€â”€ MOVIES & WATCHLIST â”€â”€ */
+/* ── MOVIES & WATCHLIST ── */
 .movies-section {
   background: #ffffff;
 }
@@ -2446,7 +2446,7 @@ button { border: none; background: none; cursor: none; font: inherit; }
   color: var(--cherry-soft);
 }
 
-/* â”€â”€ EXPANSION RESPONSIVE BREAKPOINTS â”€â”€ */
+/* ── EXPANSION RESPONSIVE BREAKPOINTS ── */
 @media (max-width: 1200px) {
   .love-grid { grid-template-columns: repeat(3, 1fr); }
   .song-player-container { gap: 3rem; }
@@ -2478,11 +2478,11 @@ button { border: none; background: none; cursor: none; font: inherit; }
 
 
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   SECTION 4 â€” SCROLL VIDEO REEL
+/* ═══════════════════════════════════════════════════
+   SECTION 4 — SCROLL VIDEO REEL
    Sticky viewport; reel-track translates X as user
    scrolls through the tall outer section.
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+═══════════════════════════════════════════════════ */
 
 #reel-section {
   position: relative;
@@ -2644,9 +2644,9 @@ button { border: none; background: none; cursor: none; font: inherit; }
 }
 
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   SECTION 5 â€” EDITORIAL TEXT + PHOTO SPREAD
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+/* ═══════════════════════════════════════════════════
+   SECTION 5 — EDITORIAL TEXT + PHOTO SPREAD
+═══════════════════════════════════════════════════ */
 
 #editorial-section {
   min-height: 100vh;
@@ -2681,7 +2681,7 @@ button { border: none; background: none; cursor: none; font: inherit; }
   z-index: 2;
 }
 
-/* â”€â”€ Text side â”€â”€ */
+/* ── Text side ── */
 .editorial-text-side {
   display: flex;
   flex-direction: column;
@@ -2739,7 +2739,7 @@ button { border: none; background: none; cursor: none; font: inherit; }
   font-style: italic;
 }
 
-/* â”€â”€ Photo side â”€â”€ */
+/* ── Photo side ── */
 .editorial-photo-side {
   position: relative;
 }
@@ -2792,18 +2792,18 @@ button { border: none; background: none; cursor: none; font: inherit; }
 }
 
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   SECTION 6 â€” SCROLL-DRIVEN PAGE-FLIP BOOK
+/* ═══════════════════════════════════════════════════
+   SECTION 6 — SCROLL-DRIVEN PAGE-FLIP BOOK
    .book-outer is tall; .book-sticky pins to viewport;
    JS flips .book-page elements on scroll.
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+═══════════════════════════════════════════════════ */
 
 .book-section {
   position: relative;
 }
 
 .book-outer {
-  /* 8 pages Ã— 200vh per page */
+  /* 8 pages × 200vh per page */
   height: 1600vh;
   position: relative;
 }
@@ -2822,7 +2822,7 @@ button { border: none; background: none; cursor: none; font: inherit; }
   perspective-origin: 50% 50%;
 }
 
-/* â”€â”€ Individual book pages â”€â”€ */
+/* ── Individual book pages ── */
 .book-page {
   position: absolute;
   inset: 0;
@@ -2853,7 +2853,7 @@ button { border: none; background: none; cursor: none; font: inherit; }
 }
 .book-page.is-turning::before { opacity: 1; }
 
-/* â”€â”€ COVER PAGE â”€â”€ */
+/* ── COVER PAGE ── */
 .book-cover-page {
   background: #0a0a0a;
   display: flex;
@@ -2926,7 +2926,7 @@ button { border: none; background: none; cursor: none; font: inherit; }
   pointer-events: none;
 }
 
-/* â”€â”€ SPREAD PAGES (photo + text) â”€â”€ */
+/* ── SPREAD PAGES (photo + text) ── */
 .bk-spread {
   width: 100%;
   height: 100%;
@@ -2971,7 +2971,7 @@ button { border: none; background: none; cursor: none; font: inherit; }
   pointer-events: none;
 }
 
-/* Text side â€” white */
+/* Text side — white */
 .bk-text-side {
   background: var(--white);
   display: flex;
@@ -3033,7 +3033,7 @@ button { border: none; background: none; cursor: none; font: inherit; }
   max-width: 360px;
 }
 
-/* â”€â”€ END PAGE â”€â”€ */
+/* ── END PAGE ── */
 .bk-end-page {
   background: var(--cherry);
   display: flex;
@@ -3062,7 +3062,7 @@ button { border: none; background: none; cursor: none; font: inherit; }
   letter-spacing: -0.01em;
 }
 
-/* â”€â”€ PROGRESS DOTS â”€â”€ */
+/* ── PROGRESS DOTS ── */
 .bk-dots {
   position: absolute;
   right: 2.5%;
@@ -3089,7 +3089,7 @@ button { border: none; background: none; cursor: none; font: inherit; }
   border-radius: 2px;
 }
 
-/* â”€â”€ PAGE COUNTER â”€â”€ */
+/* ── PAGE COUNTER ── */
 .bk-counter {
   position: absolute;
   bottom: 2.5%;
@@ -3113,12 +3113,12 @@ button { border: none; background: none; cursor: none; font: inherit; }
 }
 
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+/* ═══════════════════════════════════════════════════════
    SCRAPBOOK PAGE STYLES
-   Cream / red / dark â€” inspired by photo scrapbook aesthetic
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+   Cream / red / dark — inspired by photo scrapbook aesthetic
+═══════════════════════════════════════════════════════ */
 
-/* â”€â”€ COLLAGE SPREAD â”€â”€ */
+/* ── COLLAGE SPREAD ── */
 .bk-collage-spread {
   background: var(--cream);
   position: absolute;
@@ -3201,7 +3201,7 @@ button { border: none; background: none; cursor: none; font: inherit; }
 }
 
 
-/* â”€â”€ CREAM SCRAPBOOK PAGE â”€â”€ */
+/* ── CREAM SCRAPBOOK PAGE ── */
 .bk-scrap-cream {
   background: var(--cream);
   position: relative;
@@ -3279,7 +3279,7 @@ button { border: none; background: none; cursor: none; font: inherit; }
 .bk-scat-sm.bw { filter: grayscale(100%) contrast(1.05); }
 
 
-/* â”€â”€ DARK MINIMAL TEXT SIDE â”€â”€ */
+/* ── DARK MINIMAL TEXT SIDE ── */
 .bk-dark-text {
   background: #111;
   display: flex;
@@ -3323,7 +3323,7 @@ button { border: none; background: none; cursor: none; font: inherit; }
 }
 
 
-/* â”€â”€ MEMORIES PAGE â”€â”€ */
+/* ── MEMORIES PAGE ── */
 .bk-mem-page {
   background: var(--cream);
   position: absolute;
@@ -3383,7 +3383,7 @@ button { border: none; background: none; cursor: none; font: inherit; }
 }
 
 
-/* â”€â”€ RED TEXT SPREAD â”€â”€ */
+/* ── RED TEXT SPREAD ── */
 .bk-red-text {
   background: var(--cherry);
   display: flex;
@@ -3431,7 +3431,7 @@ button { border: none; background: none; cursor: none; font: inherit; }
 .bk-clust-photo img.bw { filter: grayscale(100%) contrast(1.08); }
 
 
-/* â”€â”€ FILM STRIP PAGE â”€â”€ */
+/* ── FILM STRIP PAGE ── */
 .bk-film-page {
   background: var(--cream);
   display: flex;
@@ -3509,7 +3509,7 @@ button { border: none; background: none; cursor: none; font: inherit; }
   filter: grayscale(100%) contrast(1.06);
 }
 
-/* Reel placeholder slot â€” label shows when video isn't loaded yet */
+/* Reel placeholder slot — label shows when video isn't loaded yet */
 .reel-placeholder { position: relative; }
 .reel-placeholder-label {
   position: absolute;
